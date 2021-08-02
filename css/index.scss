@@ -45,7 +45,6 @@ $thick: 'wght' 700, 'wdth' 200;
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow-y: scroll;
 }
 
 .panel::-webkit-scrollbar {
@@ -68,6 +67,7 @@ $thick: 'wght' 700, 'wdth' 200;
         font-family: $font;
         font-variation-settings: $thin;
         transition: 0.1s ease-out;
+        cursor: pointer;
 
         &:hover {
             transition: 0.1s ease-out;
@@ -161,4 +161,36 @@ $thick: 'wght' 700, 'wdth' 200;
     padding: 2.5rem 5rem;
     line-height: 1.8;
     font-size: 1.2rem;
+}
+
+
+.contact-panel {
+
+    .contact-panel-title {
+        font-family: $font;
+        font-variation-settings: $thick;
+        line-height: 1;
+        padding: 1rem 5rem;
+    }
+
+    .info-panel {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+// When greater than mobile
+@media screen and (min-width: 660px) {
+
+
+    .panel {
+        overflow-y: scroll;
+    }
+    
 }
