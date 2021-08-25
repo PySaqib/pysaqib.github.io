@@ -96,10 +96,27 @@
 
 .testimonial-authors .t-author img {
   width: 5rem;
+  border: solid 1px black;
 }
 
 .testimonial-authors .t-author .t-author-name {
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .testimonial-authors .t-author .t-author-name {
+    margin: 1rem 0;
+  }
+}
+
+.testimonial-authors .t-author .t-author-title {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .testimonial-authors .t-author .t-author-title {
+    margin: 1rem 0;
+  }
 }
 
 .testimonial-authors .t-author .t-project-tags {
@@ -203,6 +220,69 @@
   from {
     height: 1rem;
   }
+}
+
+.projects-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 0;
+}
+
+.project-list h6 {
+  font-family: "IBM Plex Sans Roman", Times;
+  font-variation-settings: "wght" 700, "wdth" 200;
+}
+
+.project-title {
+  border-bottom: dashed 1px black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.2rem 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.project-title:hover {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.project-title:hover a {
+  font-variation-settings: "wght" 700, "wdth" 200;
+  font-size: 1.1rem;
+}
+
+.project-title a {
+  color: black;
+  line-height: 1rem;
+  font-family: "IBM Plex Sans Roman", Times;
+  font-variation-settings: "wght" 400, "wdth" 100;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 660px) {

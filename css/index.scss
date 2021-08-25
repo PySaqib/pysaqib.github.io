@@ -110,10 +110,23 @@ $thick: 'wght' 700, 'wdth' 200;
 
         img {
             width: 5rem;
+            border: solid 1px black;
         }
 
         .t-author-name  {
-            font-weight: 700;
+            font-weight: 700;   
+            @media (max-width: 600px) {
+                margin: 1rem 0;
+            }
+        }
+
+        .t-author-title {
+            
+            font-size: 0.8rem;    
+            @media (max-width: 600px) {
+                margin: 1rem 0;
+            }
+
         }
 
         .t-project-tags {
@@ -215,6 +228,50 @@ $thick: 'wght' 700, 'wdth' 200;
     }
 }
 
+.projects-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    h6 {
+        font-family: $font;
+        font-variation-settings: $thick;
+    }
+
+}
+
+.project-title {
+
+    border-bottom: dashed 1px black;
+    width: fit-content;
+    margin: 0.2rem 0;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transition: 0.2s ease-in-out;
+        a {
+            font-variation-settings: $thick;
+            font-size: 1.1rem;
+        }
+    }
+
+    a {
+        color: black;
+        line-height: 1rem;
+        font-family: $font;
+        font-variation-settings: $med;
+        transition: 0.2s ease-in-out;
+    }
+
+}
 
 // When greater than mobile
 @media screen and (min-width: 660px) {
@@ -225,3 +282,4 @@ $thick: 'wght' 700, 'wdth' 200;
     }
     
 }
+
