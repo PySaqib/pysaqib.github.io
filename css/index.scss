@@ -40,9 +40,23 @@ $thick: 'wght' 700, 'wdth' 200;
     border: solid 1px grey;
 }
 
+main {
+    min-height: 100vh;
+    background-color: #ffeb3b;
+}
+
+@media (min-width: 1150px) {
+    main.row {
+        display: flex;
+        align-items: stretch;
+        .panel {
+            min-height: 100% !important;
+        }
+    }
+}
+
 .panel {
     min-height: 100vh !important;
-    height: 100vh;
     width: 100%;
     position: relative;
 }
@@ -56,7 +70,7 @@ $thick: 'wght' 700, 'wdth' 200;
 .nav-section {
 
     line-height: 1.5;
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     left: 5rem;
     font-size: 2rem;
@@ -80,7 +94,8 @@ $thick: 'wght' 700, 'wdth' 200;
 
 .left-panel-header {
 
-    padding-left: 5rem;
+    padding-left: 4rem;
+    position: fixed;
 
     .site-title {
         font-family: $font;

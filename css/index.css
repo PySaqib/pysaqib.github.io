@@ -30,9 +30,27 @@
   border: solid 1px grey;
 }
 
+main {
+  min-height: 100vh;
+  background-color: #ffeb3b;
+}
+
+@media (min-width: 1150px) {
+  main.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  main.row .panel {
+    min-height: 100% !important;
+  }
+}
+
 .panel {
   min-height: 100vh !important;
-  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -45,7 +63,7 @@
 
 .nav-section {
   line-height: 1.5;
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   left: 5rem;
   font-size: 2rem;
@@ -67,7 +85,8 @@
 }
 
 .left-panel-header {
-  padding-left: 5rem;
+  padding-left: 4rem;
+  position: fixed;
 }
 
 .left-panel-header .site-title {
